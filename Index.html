@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .content {
+            background: White;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px gray;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Science Notes</h1>
+    
+    <label for="topics">Select a topic:</label>
+    <select id="topics" onchange="showNotes()">
+        <option value="">-- Select Topic --</option>
+        <option value="topic1">Chemical Reaction and Equation</option>
+        <option value="topic2">Acids, Bases, and Salts</option>
+        <option value="topic3">Metals And Non metals</option>
+        <option value="topic4">Carbon and Its Compound</option>
+        <option value="topic5">Life Process</option>
+        <option value="topic6">Control and Coordination</option>
+        <option value="topic7">How do Organism Reproduce?</option>
+        <option value="topic8">Heridity</option>
+        <option value="topic9">Light - Reflection and Refraction</option>
+        <option value="topic10">The Human Eye And The Colourful World</option>
+        <option value="topic11">Electricity</option>
+        <option value="topic12">Magnetic Effect Of Electric Current</option>
+        <option value="topic13">Our Environment</option>
+    </select>
+
+    <div class="content" id="notes">
+        <p>Select a topic to see the notes.</p>
+    </div>
+
+    <script>
+        function showNotes() {
+var notes = {
+  topic1: `<h2>CHEMICAL REACTION AND EQUATION</h2>
+  <b>What is a Chemical Reaction?</b>
+  <p>A chemical reaction is a process in which substances (reactants) change into new substances (products) with different chemical properties. Bonds are broken and new bonds are formed.</p>
+
+  <b>Signs of a Chemical Reaction</b>
+  <ul>
+    <li>Change in colour</li>
+    <li>Evolution of gas</li>
+    <li>Change in temperature (exothermic/endothermic)</li>
+    <li>Formation of a precipitate</li>
+    <li>Change in state</li>
+  </ul>
+
+  <b>Types of Chemical Reactions</b>
+  <ul>
+    <li><b>Combination:</b> Two or more substances combine to form one. <mark>Example:</mark> 2Mg + O<sub>2</sub> → 2MgO.</li>
+    <li><b>Decomposition:</b> A compound breaks into simpler substances. <mark>Example:</mark> 2HgO → 2Hg + O<sub>2</sub> (on heating).</li>
+    <li><b>Displacement:</b> A more reactive element displaces a less reactive one from its compound. <mark>Example:</mark> Zn + CuSO<sub>4</sub> → ZnSO<sub>4</sub> + Cu.</li>
+    <li><b>Double displacement (metathesis):</b> Exchange of ions between two compounds. <mark>Example:</mark> Na<sub>2</sub>SO<sub>4</sub> + BaCl<sub>2</sub> → BaSO<sub>4</sub>↓ + 2NaCl.</li>
+    <li><b>Oxidation–Reduction (Redox):</b> Transfer of electrons (or oxygen) between substances. <mark>Example:</mark> CuO + H<sub>2</sub> → Cu + H<sub>2</sub>O.</li>
+  </ul>
+
+  <b>Chemical Equation</b>
+  <p>A symbolic representation of a reaction using chemical formulas and symbols. Equations must be balanced to obey the law of conservation of mass.</p>
+  <ul>
+    <li><b>Word equation:</b> Simple description using names.</li>
+    <li><b>Balanced equation:</b> Same number of each type of atom on both sides. Use coefficients, not subscripts.</li>
+  </ul>
+
+  <b>Balancing Tips</b>
+  <ul>
+    <li>Balance elements one at a time.</li>
+    <li>Balance metals first, then non-metals, hydrogen and oxygen last.</li>
+    <li>Check polyatomic ions as units if they appear unchanged on both sides.</li>
+  </ul>
+
+  <b>Important Examples & Equations</b>
+  <ul>
+    <li>Formation of rust: 4Fe + 3O<sub>2</sub> → 2Fe<sub>2</sub>O<sub>3</sub>.</li>
+    <li>Preparation of hydrogen: Zn + 2HCl → ZnCl<sub>2</sub> + H<sub>2</sub>.</li>
+    <li>Neutralization: HCl + NaOH → NaCl + H<sub>2</sub>O.</li>
+  </ul>
+
+  <b>Applications</b>
+  <p>Chemical reactions are vital in industry, biology (metabolism), environment (combustion, corrosion) and everyday life (cooking, digestion, cleaning).</p>`,
+
+  topic2: `<h2>ACIDS, BASES AND SALTS</h2>
+  <b>Acids</b>
+  <p>Acids are substances that release H<sup>+</sup> (or H<sub>3</sub>O<sup>+</sup>) ions in aqueous solutions. Properties: sour taste, corrosive, change blue litmus to red, pH &lt; 7. Example: HCl, H<sub>2</sub>SO<sub>4</sub>.</p>
+
+  <b>Bases (Alkalis)</b>
+  <p>Bases produce OH<sup>-</sup> ions in water. Properties: bitter taste, slippery feel, change red litmus to blue, pH &gt; 7. Soluble bases are called alkalis (e.g., NaOH, KOH).</p>
+
+  <b>Indicators</b>
+  <p>Substances that change colour depending on pH. Examples: litmus (red in acid, blue in base), phenolphthalein (colourless in acid, pink in base), methyl orange.</p>
+
+  <b>pH Scale</b>
+  <p>Range 0–14 indicates acidity/alkalinity. pH 7 is neutral. pH &lt; 7 acidic; pH &gt; 7 basic. pH meter and indicators can estimate pH.</p>
+
+  <b>Neutralisation</b>
+  <p>When an acid reacts with a base to form salt and water. Ex: HCl + NaOH → NaCl + H<sub>2</sub>O. Frequently exothermic.</p>
+
+  <b>Salts</b>
+  <p>Products of neutralisation. They can be acidic, basic or neutral depending on parent acid/base. Example: NaCl (neutral), NH<sub>4</sub>Cl (salt of weak base and strong acid — acidic).</p>
+
+  <b>Important Reactions & Uses</b>
+  <ul>
+    <li>Reaction of metals with acids: Zn + 2HCl → ZnCl<sub>2</sub> + H<sub>2</sub>.</li>
+    <li>Reaction of acids with carbonates: 2HCl + CaCO<sub>3</sub> → CaCl<sub>2</sub> + CO<sub>2</sub> + H<sub>2</sub>O.</li>
+    <li>Preparation of salts (precipitation, neutralisation, evaporation).</li>
+  </ul>
+
+  <b>Importance</b>
+  <p>Acids and bases are important in industry (fertilizers, detergents), biology (digestion), and everyday household products (vinegar, baking soda).</p>`,
+
+  topic3: `<h2>METALS AND NON-METALS</h2>
+  <b>General Properties</b>
+  <ul>
+    <li><b>Metals:</b> Lustrous, malleable, ductile, good conductors of heat and electricity, generally solid at room temperature (except Hg), tend to lose electrons to form cations.</li>
+    <li><b>Non-metals:</b> Dull, brittle (if solid), poor conductors, can be solid, liquid or gas, tend to gain electrons to form anions or share electrons covalently.</li>
+  </ul>
+
+  <b>Reactivity Series</b>
+  <p>Elements are arranged by their tendency to displace others. Example (most reactive → less): K, Na, Ca, Mg, Al, Zn, Fe, Pb, H, Cu, Ag, Au.</p>
+
+  <b>Reaction with Oxygen</b>
+  <ul>
+    <li>Metals form basic oxides (e.g., Na<sub>2</sub>O, CaO). Some metals (like Al) form amphoteric oxides (Al<sub>2</sub>O<sub>3</sub>).</li>
+    <li>Non-metals form acidic oxides (e.g., CO<sub>2</sub>, SO<sub>2</sub>).</li>
+  </ul>
+
+  <b>Reaction with Water and Acids</b>
+  <ul>
+    <li>Highly reactive metals (Na, K) react with water vigorously to produce hydroxide and H<sub>2</sub>.</li>
+    <li>Metals above hydrogen in reactivity series displace H<sub>2</sub> from acids: Zn + 2HCl → ZnCl<sub>2</sub> + H<sub>2</sub>.</li>
+  </ul>
+
+  <b>Extraction of Metals (Basic Idea)</b>
+  <p>Metals are extracted from ores by methods depending on their reactivity: (i) roasting and reduction with carbon (for less reactive metals), (ii) electrolysis (for highly reactive metals like Na, Al).</p>
+
+  <b>Corrosion</b>
+  <p>Slow oxidation of metals (e.g., rusting of iron). Prevention: painting, galvanising (coating with Zn), alloying, cathodic protection.</p>
+
+  <b>Important Compounds & Uses</b>
+  <ul>
+    <li>Ammonia (NH<sub>3</sub>) production uses Haber process (relevance to metals as catalysts).</li>
+    <li>Metals in alloys: Steel (Fe + C), Brass (Cu + Zn), Bronze (Cu + Sn) — improved properties.</li>
+  </ul>`,
+
+  topic4: `<h2>CARBON AND ITS COMPOUNDS</h2>
+  <b>Unique Nature of Carbon</b>
+  <p>Carbon atoms form strong covalent bonds and catenation (chain formation). It forms a vast number of compounds — basis of organic chemistry.</p>
+
+  <b>Types of Carbon Compounds</b>
+  <ul>
+    <li><b>Hydrocarbons:</b> Alkanes (single bonds, saturated), alkenes (double bonds, unsaturated), alkynes (triple bonds).</li>
+    <li><b>Functional groups:</b> Alcohols (-OH), carboxylic acids (-COOH), aldehydes, ketones, esters, etc.</li>
+  </ul>
+
+  <b>Homologous Series</b>
+  <p>Group of compounds with same functional group differing by -CH<sub>2</sub>- unit. Example: Methane, Ethane, Propane...</p>
+
+  <b>Nomenclature and Isomerism</b>
+  <p>Simple rules for naming (IUPAC). Structural isomers: same molecular formula but different arrangement (e.g., butane and isobutane).</p>
+
+  <b>Chemical Reactions of Carbon Compounds</b>
+  <ul>
+    <li><b>Combustion:</b> Hydrocarbon + O<sub>2</sub> → CO<sub>2</sub> + H<sub>2</sub>O (+ energy). Complete vs incomplete (CO formed).</li>
+    <li><b>Substitution:</b> In alkanes (e.g., chlorination).</li>
+    <li><b>Addition:</b> In alkenes and alkynes (e.g., H<sub>2</sub>, halogens add across double bonds).</li>
+    <li><b>Oxidation:</b> Alcohols &rarr; aldehydes &rarr; acids.</li>
+  </ul>
+
+  <b>Important Polymers</b>
+  <p>Plastics formed by polymerisation: Addition polymers (polyethene) and condensation polymers (nylon, polyester). Discuss advantages and environmental concerns (non-biodegradable).</p>
+
+  <b>Soaps and Detergents</b>
+  <p>Soaps are sodium or potassium salts of fatty acids (hydrophobic tail and hydrophilic head). Detergents are synthetic and work even in hard water.</p>
+
+  <b>Biomolecules (Short)</b>
+  <p>Carbohydrates, proteins and fats are carbon-based and essential for living organisms.</p>`,
+
+  topic5: `<h2>LIFE PROCESSES</h2>
+  <b>What are Life Processes?</b>
+  <p>Processes that living organisms carry out to maintain life: nutrition, respiration, transportation, excretion, and reproduction (covered separately).</p>
+
+  <b>Nutrition</b>
+  <ul>
+    <li><b>Autotrophic:</b> Plants prepare their food by photosynthesis in chloroplasts: 6CO<sub>2</sub> + 6H<sub>2</sub>O → C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub> (in presence of sunlight & chlorophyll).</li>
+    <li><b>Heterotrophic:</b> Animals and fungi obtain food from other organisms. Include modes: holozoic, parasitic, saprophytic.</li>
+  </ul>
+
+  <b>Respiration</b>
+  <p>Process of releasing energy from food. Types: aerobic (with O<sub>2</sub>; more energy; occurs in mitochondria) and anaerobic (without O<sub>2</sub>; produces lactic acid or alcohol + CO<sub>2</sub>).</p>
+
+  <b>Transportation</b>
+  <p>In plants: xylem (water & minerals, unidirectional), phloem (food, bidirectional). In animals: circulatory system — heart, blood vessels, blood (RBC, WBC, plasma, platelets).</p>
+
+  <b>Excretion</b>
+  <p>Removal of metabolic wastes. In humans: kidneys filter blood, form urine (urea, excess salts, water). In plants: stomata, transpiration, metabolic conversion.</p>
+
+  <b>Homeostasis</b>
+  <p>Maintenance of steady internal conditions (temperature, pH, glucose levels) by feedback mechanisms involving hormones and nervous control.</p>`,
+
+  topic6: `<h2>CONTROL AND COORDINATION</h2>
+  <b>Nervous System</b>
+  <p>Composed of brain, spinal cord and nerves. Neuron structure: cell body, dendrites, axon. Nerve impulse: electrical signal along neuron and chemical transmission across synapse via neurotransmitters.</p>
+
+  <b>Reflex Action</b>
+  <p>Automatic, rapid response to a stimulus through reflex arc (sensory neuron → interneuron → motor neuron). Example: knee-jerk, withdrawal from hot object.</p>
+
+  <b>Endocrine (Hormonal) System</b>
+  <p>Glands that secrete hormones into blood (pituitary, thyroid, adrenal, pancreas, gonads). Hormones regulate growth, metabolism, reproduction and homeostasis.</p>
+
+  <b>Coordination in Plants</b>
+  <p>Plants coordinate activities via hormones (auxins, gibberellins, cytokinins, abscisic acid) and tropic responses (phototropism, geotropism).</p>
+
+  <b>Comparison: Nervous vs Endocrine</b>
+  <ul>
+    <li>Nervous: fast, specific, short-lived. Endocrine: slower, widespread, long-lasting effects.</li>
+  </ul>`,
+
+  topic7: `<h2>HOW DO ORGANISMS REPRODUCE?</h2>
+  <b>Reproduction</b>
+  <p>Process by which organisms produce offspring. Ensures continuity of species. Two main types: asexual and sexual reproduction.</p>
+
+  <b>Asexual Reproduction</b>
+  <ul>
+    <li>Offspring arise from a single parent; no gamete fusion. Types: binary fission (amoeba), budding (hydra), fragmentation, vegetative propagation (plants), spore formation (fungi).</li>
+    <li>Advantages: fast, no mate needed. Disadvantage: low genetic variation.</li>
+  </ul>
+
+  <b>Sexual Reproduction</b>
+  <p>Fusion of male and female gametes (sperm and egg) to form zygote. Involves meiosis (reduction division) producing haploid gametes and fertilisation to restore diploid number.</p>
+
+  <b>Human Reproductive System (Brief)</b>
+  <ul>
+    <li><b>Male:</b> Testes (produce sperm and testosterone), vas deferens, urethra, penis.</li>
+    <li><b>Female:</b> Ovaries (eggs, oestrogen), fallopian tubes (site of fertilisation), uterus (implantation and development), vagina.</li>
+  </ul>
+
+  <b>Reproductive Health</b>
+  <p>Importance of safe sex, menstrual hygiene, prevention of sexually transmitted infections (STIs), and family planning methods.</p>`,
+
+  topic8: `<h2>HEREDITY AND EVOLUTION</h2>
+  <b>Heredity</b>
+  <p>Passing of traits from parents to offspring via genes. Genes are units of heredity located on chromosomes; made of DNA.</p>
+
+  <b>Mendelian Genetics (Basic)</b>
+  <p>Gregor Mendel’s experiments: concepts of dominant and recessive traits, genotype and phenotype, monohybrid crosses, laws of segregation and independent assortment.</p>
+
+  <b>Variation</b>
+  <p>Differences among individuals of a species due to genetic factors (mutations, recombination) and environmental factors. Variation is essential for evolution.</p>
+
+  <b>Evolution (Intro)</b>
+  <p>Change in species over time through processes like natural selection. Fossil evidence, homologous organs (common ancestry), analogous organs (convergent evolution), and adaptive features are important concepts.</p>
+
+  <b>Speciation</b>
+  <p>Formation of new species due to reproductive isolation: geographic, temporal or behavioural isolation leading to accumulation of differences.</p>`,
+
+  topic9: `<h2>LIGHT — REFLECTION AND REFRACTION</h2>
+  <b>Nature of Light</b>
+  <p>Light travels in straight lines (rectilinear propagation) and can be reflected, refracted, dispersed and absorbed.</p>
+
+  <b>Reflection of Light</b>
+  <p>Law of reflection: angle of incidence = angle of reflection. Types of reflection: regular (plane mirror) and diffuse (rough surfaces).</p>
+
+  <b>Mirrors and Images</b>
+  <ul>
+    <li><b>Plane mirror:</b> Virtual, erect image of same size, laterally inverted.</li>
+    <li><b>Spherical mirrors:</b> Concave (can form real/inverted or virtual/erect images depending on object position), convex (always virtual, erect, diminished).</li>
+  </ul>
+
+  <b>Refraction of Light</b>
+  <p>Bending of light when it passes from one medium to another due to change in speed. Snell’s law: n<sub>1</sub> sinθ<sub>1</sub> = n<sub>2</sub> sinθ<sub>2</sub>. Refractive index (n) = c / v.</p>
+
+  <b>Laws of Refraction & Critical Angle</b>
+  <p>When light goes from denser to rarer medium beyond critical angle it undergoes total internal reflection. Applications: optical fibres, periscope, lenses.</p>
+
+  <b>Lenses</b>
+  <p>Convex (converging) and concave (diverging) lenses. Image formation depends on object distance. Lens formula: 1/f = 1/v - 1/u and magnification m = v/u.</p>`,
+
+  topic10: `<h2>THE HUMAN EYE AND THE COLOURFUL WORLD</h2>
+  <b>Structure of the Eye</b>
+  <ul>
+    <li>Cornea, aqueous humour, iris (controls pupil size), lens (accommodation), retina (contains rod and cone cells), optic nerve.</li>
+  </ul>
+
+  <b>Vision and Defects</b>
+  <p>Accommodation: change in lens shape to focus objects at different distances. Common defects:</p>
+  <ul>
+    <li><b>Myopia (nearsightedness):</b> distant objects blurred — corrected with concave lens.</li>
+    <li><b>Hypermetropia (farsightedness):</b> near objects blurred — corrected with convex lens.</li>
+    <li><b>Presbyopia:</b> age-related loss of accommodation — bifocal lenses.</li>
+    <li><b>Cataract:</b> clouding of lens — treated by surgical removal and artificial lens.</li>
+  </ul>
+
+  <b>Refraction of Light through Prisms and Dispersion</b>
+  <p>White light disperses into seven colours (VIBGYOR) due to different refractive indices for different wavelengths. Scattering of light (Rayleigh scattering) explains blue sky and red sunsets.</p>
+
+  <b>Applications</b>
+  <p>Uses of scattering & dispersion: blue colour of sky, reddening of sun at sunrise/sunset, formation of rainbow (refraction + reflection + dispersion of sunlight by raindrops).</p>`,
+
+  topic11: `<h2>ELECTRICITY</h2>
+  <b>Current, Voltage and Resistance</b>
+  <p>Electric current (I) is rate of flow of charge (Q) — I = Q/t. Potential difference (V) drives current. Ohm’s law: V = IR (for ohmic resistors).</p>
+
+  <b>Resistance and Factors Affecting It</b>
+  <p>Resistance depends on material, length (∝ length), cross-sectional area (∝ 1/area) and temperature (usually increases with T for metals).</p>
+
+  <b>Series and Parallel Circuits</b>
+  <ul>
+    <li><b>Series:</b> Same current flows, total resistance R<sub>eq</sub> = R<sub>1</sub> + R<sub>2</sub> + ...</li>
+    <li><b>Parallel:</b> Same voltage across each branch, 1/R<sub>eq</sub> = 1/R<sub>1</sub> + 1/R<sub>2</sub> + ...</li>
+  </ul>
+
+  <b>Electrical Power and Energy</b>
+  <p>Power P = VI = I<sup>2</sup>R = V<sup>2</sup>/R. Energy consumed = Power × time (units: kWh).</p>
+
+  <b>Heating Effects and Safety</b>
+  <p>Heating in appliances (e.g., electric heater) arises due to I<sup>2</sup>R. Safety devices: fuse, circuit breaker, earthing, MCB to prevent overcurrent and electric shock.</p>`,
+
+  topic12: `<h2>MAGNETIC EFFECT OF ELECTRIC CURRENT</h2>
+  <b>Electric Current Produces Magnetic Field</b>
+  <p>A current-carrying conductor generates a magnetic field; field lines form concentric circles. Right-hand thumb rule gives direction.</p>
+
+  <b>Magnetic Field Due to a Solenoid</b>
+  <p>A solenoid behaves like a bar magnet when current passes through it. Field inside is strong and uniform; outside resembles a dipole.</p>
+
+  <b>Electromagnets and Applications</b>
+  <p>Strength of electromagnet depends on number of turns, current and core material (iron increases strength). Used in motors, loudspeakers, relays, MRI.</p>
+
+  <b>Force on Current-Carrying Conductor</b>
+  <p>A current in a magnetic field experiences a force (Fleming’s left-hand rule) — basis of electric motor. Motion of charges in magnetic field leads to electromagnetic induction (Faraday’s law) — basis of generator.</p>
+
+  <b>Eletromagnetic Induction</b>
+  <p>Changing magnetic flux through a coil induces emf. Applications: transformers, generators, induction cookers.</p>`,
+
+  topic13: `<h2>OUR ENVIRONMENT</h2>
+  <b>Components of Environment</b>
+  <p>Biotic (living organisms) and abiotic (air, water, soil, sunlight). Ecosystem is interaction between organisms and their environment.</p>
+
+  <b>Food Chains and Food Webs</b>
+  <p>Producers (plants) → Consumers (herbivores, carnivores) → Decomposers (bacteria, fungi). Energy flow is unidirectional; pyramids of number/biomass/energy describe trophic structure.</p>
+
+  <b>Biogeochemical Cycles</b>
+  <p>Water cycle, carbon cycle, nitrogen cycle — essential for maintaining ecosystem balance. Role of decomposers and bacteria (nitrogen-fixing bacteria) highlighted.</p>
+
+  <b>Pollution and Its Types</b>
+  <ul>
+    <li><b>Air pollution:</b> smog, particulate matter, SO<sub>2</sub>, NOx; causes respiratory diseases and acid rain.</li>
+    <li><b>Water pollution:</b> discharge of sewage, industrial effluents causing eutrophication and harm to aquatic life.</li>
+    <li><b>Soil pollution:</b> pesticides, heavy metals affecting fertility and food safety.</li>
+    <li><b>Noise pollution:</b> harmful at high dB levels.</li>
+  </ul>
+
+  <b>Ozone Layer and Greenhouse Effect</b>
+  <p>Ozone layer in stratosphere protects from harmful UV rays. Ozone depletion (CFCs) leads to increased UV exposure. Greenhouse gases (CO<sub>2</sub>, CH<sub>4</sub>) trap heat — global warming.</p>
+
+  <b>Conservation and Sustainable Practices</b>
+  <p>Reduce, reuse, recycle; afforestation; sustainable agriculture; wastewater treatment; use of renewable energy sources. Role of individual and community in conservation.</p>
+
+  <b>Environmental Laws and Awareness (Basic)</b>
+  <p>Importance of environmental education, protected areas (national parks, wildlife sanctuaries) and legal measures to protect biodiversity.</p>`
+};
+
+            var selectedTopic = document.getElementById("topics").value;
+            var notesDiv = document.getElementById("notes");
+
+            if (selectedTopic) {
+                notesDiv.innerHTML = notes[selectedTopic];
+            } else {
+                notesDiv.innerHTML = "<p>Select a topic to see the notes.</p>";
+            }
+        }
+    </script>
+</body>
+</html>
