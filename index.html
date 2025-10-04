@@ -6,14 +6,34 @@
     <title>Science Notes</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-image: url(https://github.com/Soumya885/Ssr/blob/main/x.jpg?raw=true);
-            color: Black;
-            background-size: cover;
-            background-position:centre;
-        }
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-image: url(https://github.com/Soumya885/Ssr/blob/main/x.jpg?raw=true);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    color: black;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-attachment: scroll; 
+        background-size: cover;        
+        background-position: center top;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    body {
+        margin: 10px;
+        padding: 10px;
+        background-size: contain;   
+        background-color: black;    
+    }
+}
         h1 {
             text-align: center;
         }
